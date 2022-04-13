@@ -6,6 +6,23 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+	
+	
+    int[] numbersArray;
+
+    //create file object and scanner
+    File myFile = new File("Numbers.txt");
+    Scanner file = new Scanner(myFile);
+
+    //read numbers from file and put them into an array of specified size(number of numbers in the file)
+    public void arrayGenerator(int arraySize){
+        numbersArray = new int[arraySize];
+        for (int i = 0; i<numbersArray.length; i++){
+            int number = Integer.parseInt(file.nextLine());
+            numbersArray[i] = number;
+        }
+
+    }
 
 
     public static int medianMethod(ArrayList medianArray){
@@ -29,9 +46,6 @@ public class Main {
         // }
 
 
-
-    File myFile = new File("Numbers.txt");
-    Scanner inputFile = new Scanner(myFile);
 
 
         }
